@@ -1,0 +1,48 @@
+
+
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="utf-8" />
+    <title>{{ title }}</title>
+    <style>
+        body { font-family:Calibri; font-size:11pt; margin: 50pt; }
+        h1 { margin:0pt 0pt 15pt 0pt; text-align:left; font-family:Calibri; font-size:12pt; font-weight:bold; font-style:italic; color:#000000 }
+        p { margin:0pt; text-align:left; font-family:Calibri; font-size:10pt; color:#000000 }
+        table { border:0.75pt solid #000000; border-collapse:collapse; width:100%; margin-top: 10pt; margin-bottom: 10pt; }
+        td { border:0.75pt solid #000000; vertical-align:top; padding: 5pt; }
+        strong { font-weight:bold; }
+    </style>
+</head>
+<body>
+    <p>{{ date }}</p>
+    <br>
+    <h1>Fornecedor</h1>
+    <p>{{ supplier_name }} CNPJ {{ supplier_cnpj }}</p>
+    <p>{{ supplier_address }}</p>
+    <br>
+    <h1>Cliente</h1>
+    <p>{{ client_name }} CNPJ {{ client_cnpj }}</p>
+    <p>{{ client_address }}</p>
+    <br>
+    <h1>Nota de Despesa</h1>
+    <p>Nº. {{ invoice_number }}</p>
+    <p>Mês referência: {{ invoice_month }}</p>
+    <table>
+        <tr>
+            <td><strong>Discriminação</strong></td>
+            <td><strong>Valor</strong></td>
+        </tr>
+        <tr>
+            <td>
+                {{ description }}<br>
+                Período: {{ period }}<br>
+                Vencimento: {{ due_date }}
+            </td>
+            <td>{{ amount }}</td>
+        </tr>
+    </table>
+    <p>Depósito em Conta Corrente – {{ bank_details }}</p>
+    <p>PIX: {{ pix }}</p>
+</body>
+</html>
